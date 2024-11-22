@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/6f0143ff2b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="about-us.css">
+<link rel="icon" href="images/Mighty_Fitness_black.webp">
+    <title>About Us</title>
+</head>
+
+<body>
+
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtny">
+        <i class="fas fa-bars"></i>
+    </label>
+
+    <div class="dflex">
+        <label class="logoy">
+            <a href="index.html"><img class="Websitelogoy" src="images/Mighty_Fitness_black.webp" alt="WEBlogoy"></a>
+            <span class="absolute">MightyFitness</span>
+        </label>
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">SignUp</a></li>
+    </ul>
+</nav>
+
+<img src="images/sbanner.webp" alt="banner" class="banner">
+
+<section class="section1">
+    <div class="section1-div1">
+        <p class="p1">About <span class="colour1">Mighty Fitness</span></p>
+        <span id="element"></span>
+        <div class="p2">Welcome to Mighty Fitness - Your Ultimate Fitness Destination! <br>
+            At Mighty Fitness, we believe in empowering you on your fitness journey with a range <br>
+            of cutting-edge features designed to meet your individual needs. Our commitment is <br>
+            to provide a welcoming and supportive environment, ensuring you have all the tools <br>
+            and resources required to achieve your fitness goals.<br>
+        </div>
+    </div>
+</section>
+<div class="height" style="height: 12vh;"></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+        strings: [
+            'Calories Tracker',
+            'BMR Calculator',
+            'ChatBot Assistance',
+            'Workout Plans',
+            'Health Tracker'
+        ],
+        typeSpeed: 80,
+        loop: true,
+    });
+</script>
+
+<footer>
+    <div class="footer_logoy">
+        <div class="flx">
+            <span class="web_colory">MightyFitness</span>
+            <img id="flogoy" src="images/Mighty_Fitness_black.webp" alt="flogoy" />
+        </div>
+    </div>
+
+    <div class="footer_socials">
+        <div class="socialy">
+            <a href="#"><img src="images/instagram (1).webp" alt="instagram"></a>
+        </div>
+
+        <div class="socialy">
+            <a href="#"><img src="images/linkedin.webp" alt="linkedin"></a>
+        </div>
+
+        <div class="socialy">
+            <a href="#"><img src="images/twitter (1).webp" alt="twitter"></a>
+        </div>
+
+        <div class="socialy">
+            <a href="#"><img src="images/youtube.webp" alt="youtube"></a>
+        </div>
+
+        <div class="socialy">
+            <a href="#"><img src="images/github.webp" alt="github"></a>
+        </div>
+
+    </div>
+    <div class="footer_copyright">
+        <span class="white">// © 2023 MightyFitness PVT. LTD. All Rights Reserved.</span>
+    </div>
+</footer>
+
+</body>
+
+</html>

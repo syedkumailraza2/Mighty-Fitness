@@ -1,0 +1,110 @@
+body {
+	font-family: 'Fira Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.form {
+	width: 600px;
+	background-color: #000;
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.groups {
+	text-decoration: none;
+	list-style-type: none;
+	padding: 0;
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+li a:hover{
+	color: white;
+}
+.groups li {
+	text-align: center;
+	width: 200px;
+	text-decoration: none;
+	margin-right: 8px;
+	color: #fff; /* Set text color to white */
+}
+
+.tab {
+	margin-left: 20px;
+	text-decoration: none;
+	color: #fff;
+	background-color: #333;
+	padding: 10px 15px;
+	border-radius: 15px;
+}
+
+a:hover {
+    color: #FFBE00;
+}
+
+.tab.active {
+	background-color: #FFBE00;
+}
+
+h1 {
+	color: #fff;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.top-row {
+	display: flex;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.field-wrap {
+	margin-bottom: 15px;
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	border: 1px solid #fff;
+	border-radius: 5px;
+}
+
+button {
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	border: none;
+	border-radius: 5px;
+	background-color: #FFBE00;
+	color: #000;
+	cursor: pointer;
+	margin-bottom: 30px;
+}
+
+button:hover {
+	background-color: #000;
+	color: #fff;
+}
+li a{
+	margin-top: 30px;
+	text-decoration: none;
+	color: #fff;
+}
+
+#first_name{
+	width: 300px;
+	margin-left:-20px;
+	margin-right:25px;
+}
+#last_name{
+	width: 275px;
+	margin-right:25px;
+}

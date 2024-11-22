@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Fitness Tracker</title>
+      <!-- Google Fonts Link For Icons -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+      <script src="https://kit.fontawesome.com/6f0143ff2b.js" crossorigin="anonymous"></script>
+      <link rel="icon" href="images/Mighty_Fitness_black.webp">
+      <link rel="stylesheet" href="index.css">
+      <link rel="stylesheet" href= "chatbot.css">
+      <link rel="stylesheet" href="physicalfitness.css">
+</head>
+<body>
+    
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtny">
+           <i class="fas fa-bars"></i>
+       </label>
+       
+      <div class="dflex">
+        <label class="logoy">
+         <a href="index.html"><img class="Websitelogoy" src="images/Mighty_Fitness_black.webp" alt="WEBlogoy"></a>
+         <span class="absolute">MightyFitness</span></label></div>
+       <ul>
+           <li><a  href="index.html">Home</a></li>
+           <li><a href="about-us.html">About</a></li>
+           <li><a href="login.html">Login</a></li>
+           <li><a href="signup.html">SignUp</a></li>
+       </ul>
+      </nav>
+
+      <div class="box">
+        <form id="assessmentForm">
+            <h2>Physical Health Tracker</h2>
+
+            <div class="outer">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+           
+            <div class="question-group active" id="group1">
+                <label>1. How many hours of sleep do you get on average per night?</label>
+                <div class="options">
+                    <div class="op1">
+                        <div class="option">
+                            <input type="radio" id="sleep" name="sleep" value="1">
+                            <label for="sleep1">7-8 hours</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="sleep" name="sleep" value="2">
+                            <label for="sleep2">6 hours</label>
+                        </div>
+                    </div>
+                    
+                    <div class="op2">
+                        <div class="option">
+                            <input type="radio" id="sleep" name="sleep" value="3">
+                            <label for="sleep3">5 hours</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="sleep" name="sleep" value="4">
+                            <label for="sleep4">Less than 5 hours</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question-group" id="group2">
+                <label>2. How many servings of fruits and vegetables do you eat daily?</label>
+                <div class="options">
+                    <div class="op1">
+                        <div class="option">
+                            <input type="radio" id="nutrition" name="nutrition" value="1">
+                            <label for="nutrition1">5 or more</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="nutrition" name="nutrition" value="2">
+                            <label for="nutrition2">3-4</label>
+                        </div>
+                    </div>
+                    
+                    <div class="op2">
+                        <div class="option">
+                            <input type="radio" id="nutrition" name="nutrition" value="3">
+                            <label for="nutrition3">1-2</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="nutrition" name="nutrition" value="4">
+                            <label for="nutrition4">None</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-group" id="group3">
+                <label>3. How many days per week do you engage in moderate-intensity exercise (e.g., brisk walking)?</label>
+                <div class="options">
+                    <div class="op1">
+                        <div class="option">
+                            <input type="radio" id="exercise" name="exercise" value="1">
+                            <label for="exercise1">5 or more days</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="exercise" name="exercise" value="2">
+                            <label for="exercise2">3-4 days</label>
+                        </div>
+                    </div>
+                    
+                    <div class="op2">
+                        <div class="option">
+                            <input type="radio" id="exercise" name="exercise" value="3">
+                            <label for="exercise3">1-2 days</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="exercise" name="exercise" value="4">
+                            <label for="exercise4">None</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-group" id="group4">
+                <label>4. How often do you engage in strength training exercises per week?</label>
+                <div class="options">
+                    <div class="op1">
+                        <div class="option">
+                            <input type="radio" id="strengthTraining" name="strengthTraining" value="1">
+                            <label for="strengthTraining1">3 or more days</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="strengthTraining" name="strengthTraining" value="2">
+                            <label for="strengthTraining2">1-2 days</label>
+                        </div>
+                    </div>
+                    
+                    <div class="op2">
+                        <div class="option">
+                            <input type="radio" id="strengthTraining" name="strengthTraining" value="3">
+                            <label for="strengthTraining3">Less than 1 day</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="strengthTraining" name="strengthTraining" value="4">
+                            <label for="strengthTraining4">None</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-group" id="group5">
+                <label>5. How many glasses of water do you drink per day?</label>
+                <div class="options">
+                    <div class="op1">
+                        <div class="option">
+                            <input type="radio" id="hydration" name="hydration" value="1">
+                            <label for="hydration1">8 or more glasses</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="hydration" name="hydration" value="2">
+                            <label for="hydration2">4-7 glasses</label>
+                        </div>
+                    </div>
+                    
+                    <div class="op2">
+                        <div class="option">
+                            <input type="radio" id="hydration" name="hydration" value="3">
+                            <label for="hydration3">1-3 glasses</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="hydration" name="hydration" value="4">
+                            <label for="hydration4">None</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-group" id="group6">
+                <label>6. How often do you perform stretching or flexibility exercises?</label>
+                <div class="options">
+                    <div class="op1">
+                        <div class="option">
+                            <input type="radio" id="flexibility" name="flexibility" value="1">
+                            <label for="flexibility1">Daily</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="flexibility" name="flexibility" value="2">
+                            <label for="flexibility2">3-4 days per week</label>
+                        </div>
+                    </div>
+                    
+                    <div class="op2">
+                        <div class="option">
+                            <input type="radio" id="flexibility" name="flexibility" value="3">
+                            <label for="flexibility3">1-2 days per week</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="flexibility" name="flexibility" value="4">
+                            <label for="flexibility4">Rarely/Never</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-group" id="group7">
+                <label>7. How many hours per day do you spend sitting (e.g., work, screen time)?</label>
+                <div class="options">
+                    <div class="op1">
+                        <div class="option">
+                            <input type="radio" id="sitting" name="sitting" value="1">
+                            <label for="sitting1">Less than 4 hours</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="sitting" name="sitting" value="2">
+                            <label for="sitting2">4-6 hours</label>
+                        </div>
+                    </div>
+                    
+                    <div class="op2">
+                        <div class="option">
+                            <input type="radio" id="sitting" name="sitting" value="3">
+                            <label for="sitting3">6-8 hours</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="sitting" name="sitting" value="4">
+                            <label for="sitting4">More than 8 hours</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-group" id="group8">
+                <label>8. How often do you engage in outdoor activities or sports?</label>
+                <div class="options">
+                    <div class="op1">
+                        <div class="option">
+                            <input type="radio" id="outdoorActivities" name="outdoorActivities" value="1">
+                            <label for="outdoorActivities1">Several times per week</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="outdoorActivities" name="outdoorActivities" value="2">
+                            <label for="outdoorActivities2">Once a week</label>
+                        </div>
+                    </div>
+                    
+                    <div class="op2">
+                        <div class="option">
+                            <input type="radio" id="outdoorActivities" name="outdoorActivities" value="3">
+                            <label for="outdoorActivities3">Once a month</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="outdoorActivities" name="outdoorActivities" value="4">
+                            <label for="outdoorActivities4">Rarely/Never</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-group" id="group9">
+                <label>9. How often do you check your overall health status (e.g., regular check-ups, screenings)?</label>
+                <div class="options">
+                    <div class="op1">
+                        <div class="option">
+                            <input type="radio" id="healthCheck" name="healthCheck" value="1">
+                            <label for="healthCheck1">Annually</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="healthCheck" name="healthCheck" value="2">
+                            <label for="healthCheck2">Biannually</label>
+                        </div>
+                    </div>
+                    
+                    <div class="op2">
+                        <div class="option">
+                            <input type="radio" id="healthCheck" name="healthCheck" value="3">
+                            <label for="healthCheck3">Occasionally</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="healthCheck" name="healthCheck" value="4">
+                            <label for="healthCheck4">Rarely/Never</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-group" id="group10">
+                <label>10. How would you rate your overall physical well-being?</label>
+                <div class="options">
+                    <div class="op1">
+                        <div class="option">
+                            <input type="radio" id="wellBeing" name="wellBeing" value="1">
+                            <label for="wellBeing1">Excellent</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="wellBeing" name="wellBeing" value="2">
+                            <label for="wellBeing2">Good</label>
+                        </div>
+                    </div>
+                    
+                    <div class="op2">
+                        <div class="option">
+                            <input type="radio" id="wellBeing" name="wellBeing" value="3">
+                            <label for="wellBeing3">Fair</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="wellBeing" name="wellBeing" value="4">
+                            <label for="wellBeing4">Poor</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="prevbtn" type="button" onclick="prevGroup()">&larr; Previous</button>
+            <button id="nextbtn" type="button" onclick="nextGroup()">Next &rarr;</button>
+            <button id="submitbtn" type="button" onclick="submitForm()">Submit</button>
+
+            <div id="result"></div>
+        </form>
+    </div>
+
+
+
+    <footer>
+        <div class="footer_logoy">
+          <div class="flx">
+            <span class="web_colory">MightyFitness</span>
+            <img id="flogoy" src="images/Mighty_Fitness_black.webp" alt="flogoy" />
+          </div>
+        </div>
+    
+        <div class="footer_socials">
+          <div class="socialy">
+            <a href="#"><img src="images/instagram (1).webp" alt="instagram"></a>
+          </div>
+    
+          <div class="socialy">
+           <a href="#"><img src="images/linkedin.webp" alt="linkedin"></a>
+          </div>
+    
+          <div class="socialy">
+           <a href="#"><img src="images/twitter (1).webp" alt="twitter"></a>
+          </div>
+    
+          <div class="socialy">
+            <a href="#"><img src="images/youtube.webp" alt="youtube"></a>
+          </div>
+    
+          <div class="socialy">
+            <a href="#"><img src="images/github.webp" alt="github"></a>
+          </div>
+          
+       </div>
+         <div class="footer_copyright">
+         <span class="white">// © 2023 MightyFitness PVT. LTD. All Rights Reserved.</span>
+        </div>
+      </footer>
+
+
+    <script src="physicalfitness.js"></script>
+</body>
+</html>

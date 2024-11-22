@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Mighty_Fitness_black.webp">
+    <title>SignUp</title>
+  
+    <link rel="stylesheet" href="signup.css">
+   
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="form">
+      
+        <div class="tab-content">
+            <div id="signup">
+                <form >
+                  <ul class="groups">
+                    <li class="tab active"><a href="#signup" style="border-radius: 15px!important;margin-right:8x;">Sign Up</a></li>
+                    <li class="tab"><a href="login.html" style="border-radius: 15px!important;margin-left:8px;">Log In</a></li>
+                  </ul>
+                  <h1>Register</h1>
+                    <div class="top-row">
+                        <div class="field-wrap">
+                            <input type="text" autocomplete="off" placeholder="First Name" id="first_name" />
+                        </div>
+                        <div class="field-wrap">
+                            <input type="text" autocomplete="off" placeholder="Last Name" id="last_name" />
+                        </div>
+                    </div>
+                    <div class="field-wrap">
+                        <input type="email" autocomplete="off" placeholder="Email Address" id="email" />
+                    </div>
+                    <div class="field-wrap">
+                        <input type="password" autocomplete="off" placeholder="Password" id="password" />
+                    </div>
+                    <button type="submit"  class="button button-block" id="submit">Sign Up</button>
+
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    import { getDatabase,set,ref } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyDz85oSZRKpQh7QbZ_JjjutT6WYaQ6VEtA",
+        authDomain: "mighty-fitness-63c7b.firebaseapp.com",
+        projectId: "mighty-fitness-63c7b",
+        storageBucket: "mighty-fitness-63c7b.appspot.com",
+        messagingSenderId: "634002075279",
+        appId: "1:634002075279:web:1c4dd8bd87197cd74ccafa"
+    };
+
+    
+
+  const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const database = getDatabase(app);
+
+    const submitbtn = document.getElementById("submit");
+    submitbtn.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default form submission behavior
+
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var first_name = document.getElementById('first_name').value;
+        var last_name = document.getElementById('last_name').value;
+
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                console.log("in then");
+                const user = userCredential.user;
+
+                // Data saved to Realtime Database
+                set(ref(database, 'users/' + user.uid), {
+                    email: email,
+                    first_name: first_name,
+                    last_name: last_name
+                })
+                    .then(() => {
+                        alert("User created Successfully. Your Data is saved.");
+                    })
+                    .catch((error) => {
+                        console.error("Error saving data to database:", error);
+                    });
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage);
+            });
+    });
+   
+</script>
+
+</html>
+
+ 

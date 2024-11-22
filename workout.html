@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workouts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6f0143ff2b.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/Mighty_Fitness_black.webp">
+  
+</head>
+<style>
+   body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+    background-image: url(images/workgym.webp);
+    background-attachment: fixed;
+    background-size: cover; /* Optional: Adjust the background size as needed */
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* 100% of the viewport height */
+}
+a{
+    text-decoration: none;
+}
+a {
+    background-color: rgba(255, 255, 255, 0.807);
+    width: 500px; /* Default width for larger screens */
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Add some spacing between divs if needed */
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.692);
+    font-weight: 500;
+    font-size: 20px;
+    
+}
+a:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.553);
+    box-shadow: none;
+}
+ .button {
+    font-size: 18px;
+    width: fit-content;
+    padding: 10px;
+    margin-top: 20px; /* Adjust the margin for spacing */
+    text-align: center;
+}
+@media (max-width: 768px) {
+    a  {
+        width: 80%; /* Adjusted width for smaller screens */
+    }
+}
+</style>
+<body>
+    <section>
+        <a href="push.html"><div>
+            <p>Push</p>
+        </div></a>
+        <a href="pull.html"><div>
+            <p>Pull</p>
+        </div></a>
+        <a href="legs.html"><div>
+            <p>Legs</p>
+        </div></a>
+        <a href="index.html" class="button"><div>Home</div></a>
+    </section>
+</body>
+</html>

@@ -1,0 +1,120 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+body {
+ height: 100vh;
+    background: #fff;
+  overflow-y: hidden!important;
+    font-family: 'Fira Sans', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s ease;
+}
+a:hover {
+    color: #FFBE00;
+}
+form {
+    background: #12141d;
+    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, .3);
+}
+
+h1 span{
+    font-size: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    margin: 0 0 40px;
+}
+input, textarea {
+    font-size: 17px;
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    background: none;
+    background-image: none;
+    border: 1px solid #FFBE00;
+    color: #fff;
+    border-radius: 6px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+textarea {
+    border: 2px solid #FFBE00;
+    resize: vertical;
+}
+.field-wrap {
+    position: relative;
+    margin-bottom: 40px;
+}
+.top-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.top-row > div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+.top-row > div:last-child {
+    margin: 0;
+}
+.button {
+    border: 0;
+    outline: none;
+    border-radius: 15px;
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    background: #FFBE00;
+  cursor: pointer;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.button:hover, .button:focus {
+    background: #ffbf0084;
+}
+.button-block {
+    display: block;
+    width: 100%;
+}
+
+
+.groups {
+	text-decoration: none;
+	list-style-type: none;
+	padding: 0;
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.groups li {
+	text-align: center;
+	width: 200px;
+	text-decoration: none;
+	margin-right: 8px;
+	color: #fff; /* Set text color to white */
+}
+
+.tab {
+	margin-left: 20px;
+	text-decoration: none;
+	color: #fff;
+	background-color: #333;
+	padding: 10px 15px;
+	border-radius: 15px;
+}
+
+.tab.active {
+	background-color: #FFBE00;
+}
